@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #123;
+        }
+        #fahr-cels-app {
+            width: 600px;
+            min-height: 450px;
+            background-color: #abc;
+            color: #456;
+            font-family:Tahoma;
+            padding: 10px;
+            margin: 20px auto;
+            border: 10px solid #456;
+            border-radius: 10px;
+            text-align: center;
+        }
+        input, button {
+            font-size: 2rem;
+            padding: 5px 10px;
+            background-color: orange;
+            color: antiquewhite;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="fahr-cels-app">
+        <h2>Javascript temp converter</h2>
+        <h3>Enter temp:
+        <input type="number" id="myTemp" style="width:75px"></h3>
+        <br><br>
+        <button onclick="convertTemperature(FC)">
+            convert Fahrenheit to Celsius
+        </button>
+        <button onclick="convertTemperature(CF)">
+            convert Celsius to Fahrenheit
+        </button><br><br>
+
+        <img src="" style="width:50%;height:auto">
+        <h3 id="conversion">Converted Temp</h3>
+        </div>
+
+
+    </div>
+    <script>
+        function convertTemperature(t) {
+            var myTemp = document.getElementById('myTemp').value;
+            myTemp = Number(myTemp);
+            var conversion = document.getElementById('conversion');
+            var convertedTemp = 0;
+            var outputStr = "";
+            if(t == FC) {
+                convertedTemp = (myTemp - 32)*5/9;
+                convertedTemp = convertedTemp.toFixed(2);
+                outputStr = `${myTemp}&deg; C = ${convertedTemp}&deg; F`;
+            } 
+            else {
+                convertedTemp = (myTemp + 32)*5/9;
+                convertedTemp = convertedTemp.toFixed(2);
+                outputStr = `${myTemp}&deg; F = ${convertedTemp}&deg; C`;                
+            }
+            conversion.innerHTML = outputStr;
+        }
+    </script>
+</body>
+</html>
