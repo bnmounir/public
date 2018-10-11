@@ -57,13 +57,13 @@
             var conversion = document.getElementById('conversion');
             var convertedTemp = 0;
             var outputStr = "";
-            if(t == 'FC') {
+            if(t == "FC") {
                 convertedTemp = (myTemp - 32)*5/9;
                 convertedTemp = convertedTemp.toFixed(2);
                 outputStr = `${myTemp}&deg; C = ${convertedTemp}&deg; F`;
             } 
             else {
-                convertedTemp = (myTemp + 32)*5/9;
+                convertedTemp = myTemp * 9/5 + 32;
                 convertedTemp = convertedTemp.toFixed(2);
                 outputStr = `${myTemp}&deg; F = ${convertedTemp}&deg; C`;                
             }
