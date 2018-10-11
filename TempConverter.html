@@ -37,10 +37,10 @@
         <h3>Enter temp:
         <input type="number" id="myTemp" style="width:75px"></h3>
         <br><br>
-        <button onclick="convertTemperature(FC)">
+        <button onclick="convertTemperature('FC')">
             convert Fahrenheit to Celsius
         </button>
-        <button onclick="convertTemperature(CF)">
+        <button onclick="convertTemperature('CF')">
             convert Celsius to Fahrenheit
         </button><br><br>
 
@@ -57,7 +57,7 @@
             var conversion = document.getElementById('conversion');
             var convertedTemp = 0;
             var outputStr = "";
-            if(t == FC) {
+            if(t == 'FC') {
                 convertedTemp = (myTemp - 32)*5/9;
                 convertedTemp = convertedTemp.toFixed(2);
                 outputStr = `${myTemp}&deg; C = ${convertedTemp}&deg; F`;
