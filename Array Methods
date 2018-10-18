@@ -26,6 +26,10 @@ console.log(colArr);
 
 //output ===> ["red", "yellow", "blue", empty, "brown", "green", "orange", false, "spicy", 23, 213, "adding more", true, "last one"]
 
+//also grabing one element inside an element in an array
+colArr[5][4]
+
+//output ===> "n"
 
 //It's cool to learn the Methods (push, pop, shift, unshift, split, and splice...) but this index thing... I like it!!! 
 
