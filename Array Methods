@@ -16,7 +16,13 @@ console.log(colArr);
 
 // You can also add elements at a specific index, also leaving an empty index to fill in... later maybe? 
 colArr[4] = 'brown';
-console.log(colArr)
+console.log(colArr);
+
+//later maybe
+//colors.splice(3, 2, "pink", "cream")
+//(2) [empty × 2]
+//colors
+//(7) ["red", "orange", "yellow", "pink", "cream", "cool", "blueberry"]
 
 //output ===> ["red", "yellow", "blue", empty, "brown"]
 
@@ -27,7 +33,7 @@ console.log(colArr);
 //output ===> ["red", "yellow", "blue", empty, "brown", "green", "orange", false, "spicy", 23, 213, "adding more", true, "last one"]
 
 //also grabing one element inside an element in an array
-colArr[5][4]
+colArr[5][4];
 
 //output ===> "n"
 
