@@ -18,12 +18,6 @@ console.log(colArr);
 colArr[4] = 'brown';
 console.log(colArr);
 
-//later maybe
-//colors.splice(3, 2, "pink", "cream")
-//(2) [empty × 2]
-//colors
-//(7) ["red", "orange", "yellow", "pink", "cream", "cool", "blueberry"]
-
 //output ===> ["red", "yellow", "blue", empty, "brown"]
 
 //also you can add multiple elements with splice!!! (Even a boolean or a number!!!)
