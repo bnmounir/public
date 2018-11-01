@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="myWebsite" content="Resume and Photos">
+    <meta name="Mounir B" content="Mounir Website Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<title>Mounir B</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="styles/stylePhoto.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="home.html">Home</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="photography.html">Photography</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+
+        </div>
+    </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1><i class="fas fa-camera-retro"></i>   _Pictures I took!</h1>
+            <select name="pickPack" id="pickPack" style="font-size:1.5rem" onchange="swapper()">
+                <option value="">Choose Selection</option>
+                <option value="mis">Miscellaneous Thoughts</option>
+                <option value="sys">hydra Systems</option>
+            </select>
+        </div>
+
+        <div id="sidebar" class="boxy">
+            
+        </div>
+        <div id="main" class="boxy">
+            
+        </div>
+    </div>
+    <br>
+    <footer id="contact">
+        <h6>
+            <a href="mailto:bnmounir7@gmail.com" target="_top">My Email</a>
+            <a href="https://www.linkedin.com/in/mounir-benabderrahmane-16837814a/" target="_blank">My LinkedIn</a>
+            <a href="https://github.com/bnmounir/public" target="_blank">My Github</a>
+        </h6>
+            <p>&copy;</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
+
+
+The Script
+
+
+console.log("hey Sup?");
+var pic1 = ["pic_1.jpg","pic_2.jpg","pic_3.jpg","pic_4.jpg","pic_5.jpg","pic_6.jpg","pic_7.jpg","pic_8.jpg","pic_9.jpg","pic_10.jpg","pic_11.jpg","pic_12.jpg"]
+var main = document.querySelector('#main');
+var sidebar = document.querySelector('#sidebar');
+var pics = [];
+
+function swapper(){
+    document.querySelector('#main').innerHTML = '';
+    document.querySelector('#sidebar').innerHTML = '';
+    var baseURL = 'images/';
+    if (swap.value == 'mis'){
+        pics = pic1;  
+    }
+    else if(swap.value == '') {
+        pics = [];
+    }
+var mainPic = new Image();
+mainPic.addEventListener('click', function(){
+    var div = document.createElement('div');
+    // var img = document
+    div.style.cssText = "background-color:rbga(20,20,20,0.7);width:90vw;height:90vh";
+    document.querySelector('body').appendChild(div);
+})
+mainPic.src = baseURL + pics[0];
+document.querySelector('#main').appendChild(mainPic);
+for (let i = 0; i < pics.length-1; i++) {
+    let img = new Image()
+    img.src = baseURL + pics[i];
+    img.addEventListener('click', function(){
+        mainPic.src = event.target.src
+    })
+    img.addEventListener('mouseover', function(){
+        event.target.style.brightness = '0.25';
+    })
+    document.querySelector('#sidebar').appendChild(img);
+    document.querySelector('#main').appendChild(mainPic);
+};
+}
+var swap = document.querySelector('#pickPack');
+
+
+The Style
+ 
+ 
+body{
+    background-color: #abc;
+    text-align: center;
+    
+}
+#slideshow {
+    height: 75vh;
+    background-color: aliceblue;
+    padding: 1%;
+    background-color: rgb(61, 70, 79);
+}
+#main {
+    height: 70vh;
+    float: right;
+    width: 65%;
+}
+#sidebar {
+    overflow-y: scroll;
+    height: 70vh;
+    float: left;
+    width: 25%;
+}
+#main img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+}
+#sidebar img {
+    width: 100%; 
+    
+}
+#sidebar img:hover {
+    filter: saturate(3);
+}
+
+.boxy {
+    padding: 1%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(91, 81, 81);
+    border-radius: 1%;
+    margin: 1%;
+}
+input, button {
+    margin: 1rem;
+    display: block;
+}
+select {
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: rgb(168, 255, 255);
+}
+footer a {
+    margin: 0 1rem;
+}
