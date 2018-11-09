@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var nums = [45,65,32,45]
+    nums.forEach(function(nu){
+        console.log(nu);
+    });
+    function myForEach(arr, func){
+        for (var i = 0; i < arr.length; i++) {
+            func(arr[i]);
+        }
+    }
+    var colors1 = ['red','orange','yellow'];
+    myForEach(colors1, console.log);
+    myForEach(colors1, function(){console.log('anonymous func')}());
+    Array.prototype.myForEach = function(func){
+        for (let i = 0; i < this.length; i++) {
+            func(this[i]);
+        }
+    }
+    </script>
+</body>
+</html>
