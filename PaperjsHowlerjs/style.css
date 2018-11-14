@@ -1,0 +1,10 @@
+body{
+    height: 100%;
+    margin: 0;
+    background-color: bisque;
+}
+#myCanvas{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to left top, #23008f, #0040ab, #005083, #005941, #0e5d00);    background: no-repeat cover;
+}
