@@ -1,0 +1,6 @@
+ul {
+    background: darkred;
+}
+li:nth-of-type(2) {
+    background: yellow;
+}

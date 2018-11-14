@@ -1,0 +1,16 @@
+
+body {
+    font-size: 12px;
+}
+h1 {
+    font-size: 2em;
+    font-family: notable;
+}
+p {
+    font-family: merriweather;
+    line-height: 1.5;
+    width: 50%;
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 30px;
+}

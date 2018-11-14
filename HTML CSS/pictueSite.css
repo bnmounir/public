@@ -1,0 +1,15 @@
+/*CSS file*/
+h1 {
+    padding: 20px;
+    width: 30%;
+    border-bottom: 2px solid grey;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 2%;
+    text-transform: uppercase;
+}
+img {
+    
+    width: 29%;
+    float: left;
+    margin: 2%;
+}
