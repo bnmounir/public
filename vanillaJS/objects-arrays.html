@@ -1,0 +1,33 @@
+<body>
+    <script>
+        var movies = [{
+            hasWatched: true,
+            movieTitle: "The Matrix",
+            rating: 5
+            },
+            {
+            hasWatched: false,
+            movieTitle: "In Bruges",
+            rating: 4.2
+            },
+            {
+            hasWatched: true,
+            movieTitle: "Frozen",
+            rating: 3.9
+            },
+            {
+            hasWatched: false,
+            movieTitle: "Fantastic 4",
+            rating: 3
+            }];
+            movies.forEach(function(mov){
+                if(mov.hasWatched){
+                    console.log("You have Watched " + "\"" + mov.movieTitle + "\" - " + mov.rating + " Stars");
+                }
+                else {
+                    console.log("You have not seen " + "\"" + mov.movieTitle + "\" - " + mov.rating + " Stars");
+                } 
+            });
+            
+    </script>
+</body>

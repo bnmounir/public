@@ -1,0 +1,53 @@
+<body>
+    <script>
+        var movies = [{
+            hasWatched: true,
+            movieTitle: "The Matrix",
+            rating: 5
+            },
+            {
+            hasWatched: false,
+            movieTitle: "In Bruges",
+            rating: 4.2
+            },
+            {
+            hasWatched: true,
+            movieTitle: "Frozen",
+            rating: 3.9
+            },
+            {
+            hasWatched: false,
+            movieTitle: "Fantastic 4",
+            rating: 3
+            }];
+            movies.forEach(function(mov){
+                if(mov.hasWatched){
+                    console.log("You have Watched " + "\"" + mov.movieTitle + "\" - " + mov.rating + " Stars");
+                }
+                else {
+                    console.log("You have not seen " + "\"" + mov.movieTitle + "\" - " + mov.rating + " Stars");
+                } 
+            });
+            var obj = {
+                name: 'Mounir',
+                age: 28,
+                isCool: true,
+                frinds: ['Caitlin','Fatah'],
+                add: function(x,y){
+                    return x+y;
+                }
+            }
+            var objDog = {};
+            objDog.sound = function(){return "woof!";};
+            var objCat = {};
+            objCat.sound = function(){return "meow!";};
+
+            // exemple on "this" Method:
+
+            var comments = {};
+            comments.data = ["Good job!", "Bye", "Lame..."];
+            comments.print = function(){
+                this.data.forEach(function(x){console.log(x)})
+                };
+    </script>
+</body>

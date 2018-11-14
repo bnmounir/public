@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>toggle</title>
+    <style>
+    button {
+        margin: 30px;
+        padding: 10px;
+    }
+    .but {
+        background-color: rgb(129, 89, 147);
+    }
+    </style>
+</head>
+<body>
+    <button>Click Me</button>
+    <script>
+        var button = document.querySelector('button');
+        // button.addEventListener('click',function(){
+        //     var body = document.querySelector('body');
+        //     body.classList.toggle('but')
+        // })
+        var isPink = false;
+        var body = document.querySelector('body')
+        button.addEventListener('click',function(){
+            if(isPink){
+                isPink = false;
+             body.style.background = 'white';
+            }else{
+                isPink = true;
+                body.style.background = 'pink';   
+            }
+
+        })
+        isPink = false;
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1><span id="sco1">0</span> To <span id="sco2">0</span></h1>
+    <h4>Winning Score is: <span id="maxDis">0</span></h4>
+    Max Score: <input type="number">
+    <button id="p1">Player One</button>
+    <button id="p2">Player Two</button>
+    <button id="reset">Reset</button>
+    <script>
+        var maxSco = 5;
+        // document.querySelector('input').value;
+        var p1 = document.getElementById('p1');
+        var p2 = document.getElementById('p2');
+        var reset = document.querySelector('#reset');
+        var inputNum = document.querySelector('input');
+        var sco1 = document.querySelector('#sco1');
+        var sco2 = document.querySelector('#sco2');
+        var maxDis = document.getElementById('maxDis');
+        var i1 = 0;  
+        var i2 = 0; 
+        var gameOver = false;
+
+        p1.addEventListener('click',function(){
+            if(!gameOver){
+                i1++;
+                if(i1 == maxSco){
+                    sco1.style.color = 'green';
+                    gameOver = true;
+                    console.log("Game Over");
+                }
+                sco1.textContent = i1;
+            }
+        });
+        p2.addEventListener('click',function(){
+            if(!gameOver){
+                i2++;
+                if(i2 == maxSco){
+                    sco2.style.color = 'green';
+                    gameOver = true;
+                    console.log("Game Over");
+                }
+
+                sco2.textContent = i2;
+            }
+        });
+        inputNum.addEventListener('change',function(){
+            maxDis.textContent = inputNum.value;
+            maxSco = inputNum.value;
+            resetBtn();
+        })
+        reset.addEventListener('click',function(){
+            resetBtn();
+        });
+        function resetBtn(){
+            i1 = 0;
+            i2 = 0;
+            sco1.textContent = i1;
+            sco2.textContent = i2;
+            sco1.style.color = 'black';
+            sco2.style.color = 'black';
+            gameOver = false;
+        }
+    </script>
+</body>
+</html>
