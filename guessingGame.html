@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="guessGame.js"></script>
+    <script>
+        var number = Math.ceil(Math.random() * 10);
+        var guess = prompt('guess a number from 1 to 10!');
+        if (number === Number(guess)) {
+        alert("you're right!");
+        } 
+        else {
+        alert("wrong!")
+        }
+    </script>
 </head>
 <body>
     
